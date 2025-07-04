@@ -1,143 +1,214 @@
+
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SA CYBER</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Noto Sans Bengali', sans-serif;
-            background: linear-gradient(to bottom, #e6f0ff, #ffffff);
-            color: #222;
-        }
-        header {
-            background-color: #00274d;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 2em;
-            position: relative;
-        }
-        .menu {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-        }
-        .menu select {
-            font-size: 1em;
-            padding: 5px;
-        }
-        section {
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
-            background-color: #f9f9f9;
-            margin-top: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #004080;
-        }
-        .package {
-            margin: 5px 0;
-            padding: 10px;
-            background-color: #ddeeff;
-            border-left: 5px solid #004080;
-        }
-        .owner img {
-            width: 150px;
-            border-radius: 8px;
-        }
-        .footer {
-            background-color: #00274d;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-        }
-        a {
-            color: #004080;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SA CYBER</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans Bengali', sans-serif;
+      background-color: #121212;
+      color: white;
+    }
+
+    .navbar {
+      background-color: #1e1e1e;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-area img {
+      height: 36px;
+    }
+
+    .logo-area span {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .menu-toggle {
+      font-size: 28px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .menu {
+      display: none;
+      flex-direction: column;
+      background-color: #2a2a2a;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 240px;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      z-index: 999;
+    }
+
+    .menu a {
+      padding: 12px 16px;
+      text-decoration: none;
+      color: white;
+      border-bottom: 1px solid #3a3a3a;
+      font-size: 16px;
+    }
+
+    .menu a:hover {
+      background-color: #383838;
+    }
+
+    section {
+      padding: 20px;
+      border-bottom: 1px solid #333;
+    }
+
+    h2 {
+      color: #ff4c4c;
+    }
+
+    .package {
+      margin: 5px 0;
+    }
+
+    .owner img {
+      height: 100px;
+      border-radius: 10px;
+    }
+
+    .payment-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #e2136e;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1e1e1e;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        SA CYBER
-        <div class="menu">
-            <select onchange="if(this.value) window.open(this.value, '_blank')">
-                <option value="">সার্ভিস মেনু</option>
-                <option value="http://172.27.27.3/">Live Cricket</option>
-                <option value="https://www.banglamagazine.news/">BD News</option>
-                <option value="https://www.bioscopelive.com/">Bioscope</option>
-                <option value="https://www.banglahealthcare.com/">Bangla Health Care</option>
-                <option value="https://filmzie.com/home">Filmzie TV Shows</option>
-                <option value="https://www.bilibili.tv/en/category?season_type=1,4">BiliBili</option>
-            </select>
-        </div>
-    </header>
 
-    <section>
-        <h2>প্রিয় গ্রাহক</h2>
-        <p>আমাদের সকল সম্মানিত গ্রাহকদের অবগতির জন্য জানানো যাচ্ছে যে, আপনারা আপনাদের ইন্টারনেট বিল সঠিক সময়ে নিজ দায়িত্বে পরিশোধ করুন। অন্যথায় আপনার ইন্টারনেট সংযোগ সার্ভার থেকে স্বয়ংক্রিয়ভাবে বিচ্ছিন্ন হবে। দয়া করে বিল বিকাশ অথবা অফিসে এসে পরিশোধ করুন।</p>
-        <p><strong>প্রেমেন্ট নম্বর: ০১৯৯৯৯৪৪৫৬৬ (বিকাশ)</strong></p>
-    </section>
+  <div class="navbar">
+    <div class="logo-area">
+      <img src="logo.jpg" alt="SA Cyber Logo">
+      <span>SA CYBER</span>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="menu">
+      <a href="http://172.27.27.3/" target="_blank">📺 Live Cricket</a>
+      <a href="https://www.banglamagazine.news/" target="_blank">📰 BD News</a>
+      <a href="https://www.bioscopelive.com/" target="_blank">🎬 Bioscope</a>
+      <a href="https://www.banglahealthcare.com/" target="_blank">🩺 Bangla Health Care</a>
+      <a href="https://www.bilibili.tv/en/category?season_type=1,4" target="_blank">🎥 BiliBili</a>
+      <a href="https://filmzie.com/home" target="_blank">📽️ Filmzie TV Shows</a>
+    </div>
+  </div>
 
-    <section>
-        <h2>ইন্টারনেট প্যাকেজ</h2>
-        <div class="package">৳500 - 8 Mbps</div>
-        <div class="package">৳600 - 10 Mbps</div>
-        <div class="package">৳700 - 12 Mbps</div>
-        <div class="package">৳800 - 15 Mbps</div>
-        <div class="package">৳1000 - 20 Mbps</div>
-        <div class="package">৳1500 - 30 Mbps</div>
-        <div class="package">৳2000 - 50 Mbps</div>
-    </section>
+  <section>
+    <h2>প্রিয় গ্রাহক</h2>
+    <p>আমাদের সকল সম্মানিত গ্রাহকদের অবগতির জন্য জানানো যাচ্ছে যে, আপনারা আপনাদের ইন্টারনেট বিল সঠিক সময়ে নিজ দায়িত্বে পরিশোধ করুন। অন্যথায় আপনার ইন্টারনেট সংযোগ সার্ভার থেকে স্বয়ংক্রিয়ভাবে বিচ্ছিন্ন হবে। দয়া করে বিল বিকাশ অথবা অফিসে এসে পরিশোধ করুন।</p>
+    <a href="bKash://payment?phone=01999944566" class="payment-button">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/BKash_Logo.svg/120px-BKash_Logo.svg.png" alt="bKash Logo" style="height:24px;">
+      বিকাশে পেমেন্ট করুন
+    </a>
+  </section>
 
-    <section>
-        <h2>কভারেজ এলাকা</h2>
-        <p>ঢাকা মিরপুর ২ এবং মিরপুর ১০</p>
-    </section>
+  <section>
+    <h2>ইন্টারনেট প্যাকেজ</h2>
+    <div class="package">৳500 - 8 Mbps</div>
+    <div class="package">৳600 - 10 Mbps</div>
+    <div class="package">৳700 - 12 Mbps</div>
+    <div class="package">৳800 - 15 Mbps</div>
+    <div class="package">৳1000 - 20 Mbps</div>
+    <div class="package">৳1500 - 30 Mbps</div>
+    <div class="package">৳2000 - 50 Mbps</div>
+  </section>
 
-    <section>
-        <h2>যোগাযোগ</h2>
-        <p>ঠিকানা: ৫৪/৪ সেনপাড়া পর্বতা, মিরপুর ১০, ঢাকা ১২১৬</p>
-        <p>ফোন: ০১৯৯৯৯৪৪৫৬১-৬</p>
-    </section>
+  <section>
+    <h2>কভারেজ এলাকা</h2>
+    <p>ঢাকা মিরপুর ২ এবং মিরপুর ১০</p>
+  </section>
 
-    <section>
-        <h2>গ্রাহক সহায়তা</h2>
-        <p>যেকোনো সমস্যা বা অভিজোগ থাকলে উপরের নম্বরে যোগাযোগ করুন অথবা অফিসে আসুন।</p>
-    </section>
+  <section>
+    <h2>যোগাযোগ</h2>
+    <p>ঠিকানা: ৫৪/৪ সেনপাড়া পর্বতা, মিরপুর ১০, ঢাকা ১২১৬</p>
+    <p>ফোন: ০১৯৯৯৯৪৪৫৬১-৬</p>
+  </section>
 
-    <section>
-        <h2>অতিরিক্ত সার্ভিসসমূহ</h2>
-        <ul>
-            <li>FTV Server - SA CYBER</li>
-            <li>Movie Server: <a href="http://dhakamovie.com/" target="_blank">http://dhakamovie.com/</a></li>
-            <li>Live TV: <a href="http://172.27.27.3/" target="_blank">http://172.27.27.3/</a></li>
-            <li>Gaming Server: SA Cyber Games - <a href="http://172.27.27.5" target="_blank">http://172.27.27.5</a></li>
-            <li>ICC Server: Korean - <a href="http://10.16.100.244" target="_blank">http://10.16.100.244</a></li>
-            <li>TV Channel Server: <a href="https://bdixtv.serverbd247.com/" target="_blank">https://bdixtv.serverbd247.com/</a></li>
-            <li>Biggest Online Movie Server: <a href="http://172.27.27.1/" target="_blank">http://172.27.27.1/</a></li>
-        </ul>
-    </section>
+  <section>
+    <h2>গ্রাহক সহায়তা</h2>
+    <p>যেকোনো সমস্যা বা অভিজোগ থাকলে উপরের নম্বরে যোগাযোগ করুন অথবা অফিসে আসুন।</p>
+  </section>
 
-    <section>
-        <h2>ইউজার পোর্টাল</h2>
-        <p>সার্ভিস ব্যবস্থাপনার জন্য ইউজার পোর্টালে যান: <a href="https://sacybernet.isperp.net/ispcare" target="_blank">https://sacybernet.isperp.net/ispcare</a></p>
-    </section>
+  <section>
+    <h2>অতিরিক্ত সার্ভিসসমূহ</h2>
+    <ul>
+      <li>FTV Server - SA CYBER</li>
+      <li>Movie Server: <a href="http://dhakamovie.com/" target="_blank">http://dhakamovie.com/</a></li>
+      <li>Live TV: <a href="http://172.27.27.3/" target="_blank">http://172.27.27.3/</a></li>
+      <li>Gaming Server: SA Cyber Games - <a href="http://172.27.27.5" target="_blank">http://172.27.27.5</a></li>
+      <li>ICC Server: Korean - <a href="http://10.16.100.244" target="_blank">http://10.16.100.244</a></li>
+      <li>TV Channel Server: <a href="https://bdixtv.serverbd247.com/" target="_blank">https://bdixtv.serverbd247.com/</a></li>
+      <li>Biggest Online Movie Server: <a href="http://172.27.27.1/" target="_blank">http://172.27.27.1/</a></li>
+    </ul>
+  </section>
 
-    <section class="owner">
-        <h2>প্রতিষ্ঠান মালিক</h2>
-        <img src="owner.jpg" alt="Owner Photo">
-        <p><strong>আলমগীর মৃধা</strong></p>
-    </section>
+  <section>
+    <h2>ইউজার পোর্টাল</h2>
+    <p>সার্ভিস ব্যবস্থাপনার জন্য ইউজার পোর্টালে যান: 
+      <a href="https://sacybernet.isperp.net/ispcare" target="_blank">https://sacybernet.isperp.net/ispcare</a>
+    </p>
+  </section>
 
-    <footer class="footer">
-        &copy; ২০১৩ SA CYBER. সর্বস্বত্ব সংরক্ষিত।
-    </footer>
+  <section class="owner">
+    <h2>প্রতিষ্ঠান মালিক</h2>
+    <img src="Alamgir Mridha.jpg" alt="Owner Photo">
+    <p><strong>আলমগীর মৃধা</strong></p>
+  </section>
+
+  <footer class="footer">
+    &copy; ২০১৩ SA CYBER. সর্বস্বত্ব সংরক্ষিত।
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+    }
+
+    document.addEventListener('click', function(event) {
+      const menu = document.getElementById('menu');
+      const toggle = document.querySelector('.menu-toggle');
+      if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+        menu.style.display = 'none';
+      }
+    });
+  </script>
+
 </body>
 </html>
