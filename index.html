@@ -1,43 +1,81 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SA CYBER</title>
     <style>
-        body { font-family: sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
-        header { background: #222; color: white; padding: 20px; text-align: center; position: relative; }
-        header img { height: 50px; position: absolute; left: 20px; top: 15px; }
-        .menu { position: absolute; right: 20px; top: 25px; }
-        .menu button { background: #444; color: white; border: none; padding: 8px 12px; cursor: pointer; }
-        .dropdown { display: none; position: absolute; right: 20px; top: 60px; background: white; border: 1px solid #ccc; z-index: 1; }
-        .dropdown a { display: block; padding: 10px; text-decoration: none; color: black; }
-        .dropdown a:hover { background: #eee; }
-        section { padding: 20px; }
-        footer { background: #222; color: white; text-align: center; padding: 10px; }
-        .owner img { height: 120px; margin-top: 10px; }
-    </style>
-    <script>
-        function toggleDropdown() {
-            var d = document.getElementById("dropdown");
-            d.style.display = d.style.display === "block" ? "none" : "block";
+        body {
+            margin: 0;
+            font-family: 'Noto Sans Bengali', sans-serif;
+            background: linear-gradient(to bottom, #e6f0ff, #ffffff);
+            color: #222;
         }
-    </script>
+        header {
+            background-color: #00274d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+            position: relative;
+        }
+        .menu {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        .menu select {
+            font-size: 1em;
+            padding: 5px;
+        }
+        section {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #004080;
+        }
+        .package {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #ddeeff;
+            border-left: 5px solid #004080;
+        }
+        .owner img {
+            width: 150px;
+            border-radius: 8px;
+        }
+        .footer {
+            background-color: #00274d;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        a {
+            color: #004080;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <img src="logo.jpg" alt="SA CYBER Logo">
-        <h1>SA CYBER</h1>
+        SA CYBER
         <div class="menu">
-            <button onclick="toggleDropdown()">☰</button>
-            <div class="dropdown" id="dropdown">
-                <a href="http://172.27.27.3/" target="_blank">Live Cricket</a>
-                <a href="https://www.banglamagazine.news/" target="_blank">BD News</a>
-                <a href="https://www.bioscopelive.com/" target="_blank">Bioscope</a>
-                <a href="https://www.banglahealthcare.com/" target="_blank">Bangla Health Care</a>
-                <a href="https://filmzie.com/home" target="_blank">Filmzie TV</a>
-                <a href="https://www.bilibili.tv/en/category?season_type=1,4" target="_blank">BiliBili</a>
-            </div>
+            <select onchange="if(this.value) window.open(this.value, '_blank')">
+                <option value="">সার্ভিস মেনু</option>
+                <option value="http://172.27.27.3/">Live Cricket</option>
+                <option value="https://www.banglamagazine.news/">BD News</option>
+                <option value="https://www.bioscopelive.com/">Bioscope</option>
+                <option value="https://www.banglahealthcare.com/">Bangla Health Care</option>
+                <option value="https://filmzie.com/home">Filmzie TV Shows</option>
+                <option value="https://www.bilibili.tv/en/category?season_type=1,4">BiliBili</option>
+            </select>
         </div>
     </header>
 
@@ -49,13 +87,13 @@
 
     <section>
         <h2>ইন্টারনেট প্যাকেজ</h2>
-        <div>৳500 - 8 Mbps</div>
-        <div>৳600 - 10 Mbps</div>
-        <div>৳700 - 12 Mbps</div>
-        <div>৳800 - 15 Mbps</div>
-        <div>৳1000 - 20 Mbps</div>
-        <div>৳1500 - 30 Mbps</div>
-        <div>৳2000 - 50 Mbps</div>
+        <div class="package">৳500 - 8 Mbps</div>
+        <div class="package">৳600 - 10 Mbps</div>
+        <div class="package">৳700 - 12 Mbps</div>
+        <div class="package">৳800 - 15 Mbps</div>
+        <div class="package">৳1000 - 20 Mbps</div>
+        <div class="package">৳1500 - 30 Mbps</div>
+        <div class="package">৳2000 - 50 Mbps</div>
     </section>
 
     <section>
@@ -70,13 +108,18 @@
     </section>
 
     <section>
+        <h2>গ্রাহক সহায়তা</h2>
+        <p>যেকোনো সমস্যা বা অভিজোগ থাকলে উপরের নম্বরে যোগাযোগ করুন অথবা অফিসে আসুন।</p>
+    </section>
+
+    <section>
         <h2>অতিরিক্ত সার্ভিসসমূহ</h2>
         <ul>
             <li>FTV Server - SA CYBER</li>
             <li>Movie Server: <a href="http://dhakamovie.com/" target="_blank">http://dhakamovie.com/</a></li>
             <li>Live TV: <a href="http://172.27.27.3/" target="_blank">http://172.27.27.3/</a></li>
-            <li>Gaming Server: <a href="http://172.27.27.5" target="_blank">http://172.27.27.5</a></li>
-            <li>ICC Server: <a href="http://10.16.100.244" target="_blank">http://10.16.100.244</a></li>
+            <li>Gaming Server: SA Cyber Games - <a href="http://172.27.27.5" target="_blank">http://172.27.27.5</a></li>
+            <li>ICC Server: Korean - <a href="http://10.16.100.244" target="_blank">http://10.16.100.244</a></li>
             <li>TV Channel Server: <a href="https://bdixtv.serverbd247.com/" target="_blank">https://bdixtv.serverbd247.com/</a></li>
             <li>Biggest Online Movie Server: <a href="http://172.27.27.1/" target="_blank">http://172.27.27.1/</a></li>
         </ul>
@@ -84,7 +127,7 @@
 
     <section>
         <h2>ইউজার পোর্টাল</h2>
-        <p><a href="https://sacybernet.isperp.net/ispcare" target="_blank">https://sacybernet.isperp.net/ispcare</a></p>
+        <p>সার্ভিস ব্যবস্থাপনার জন্য ইউজার পোর্টালে যান: <a href="https://sacybernet.isperp.net/ispcare" target="_blank">https://sacybernet.isperp.net/ispcare</a></p>
     </section>
 
     <section class="owner">
@@ -93,7 +136,7 @@
         <p><strong>আলমগীর মৃধা</strong></p>
     </section>
 
-    <footer>
+    <footer class="footer">
         &copy; ২০১৩ SA CYBER. সর্বস্বত্ব সংরক্ষিত।
     </footer>
 </body>
