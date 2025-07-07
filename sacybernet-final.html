@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SA Cyber Net</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      color: #0066cc;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    header {
+      background: #003366;
+      color: white;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    header img {
+      height: 45px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-weight: 600;
+    }
+    nav a {
+      color: white;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background: #00509e;
+    }
+    section {
+      background: white;
+      padding: 20px;
+      margin: 20px 15px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    h2.section-title {
+      color: #003366;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 5px;
+    }
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+    }
+    .package {
+      background: #f1f5f9;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 8px;
+      border-left: 6px solid #0284c7;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    #owner {
+      text-align: center;
+    }
+    #owner img {
+      height: 140px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+    footer a {
+      color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <img src="logo.png" alt="SA Cyber Net Logo" />
+    <nav aria-label="Primary navigation">
+      <a href="#home">Home</a>
+      <a href="#packages">Packages</a>
+      <a href="#ftp">FTP Server</a>
+      <a href="#bdnews">BD News</a>
+      <a href="#billing">Billing</a>
+      <a href="#btrc">BTRC Approved</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section id="home">
+    <h2 class="section-title">SA Cyber Net</h2>
+    <p><strong>SA Cyber Net</strong> — গ্রামীণ অঞ্চলের জন্য একটি নির্ভরযোগ্য ব্রডব্যান্ড ইন্টারনেট সেবা।</p>
+    <p>আমরা লাইসেন্সপ্রাপ্ত UHF ব্যান্ডের মাধ্যমে দ্রুত ও নিরবিচারে ইন্টারনেট সার্ভিস প্রদান করি।</p>
+  </section>
+
+  <section id="packages">
+    <h2 class="section-title">Internet Packages</h2>
+    <div class="package-grid">
+      <div class="package">৳500 - 10 Mbps</div>
+      <div class="package">৳600 - 12 Mbps</div>
+      <div class="package">৳800 - 15 Mbps</div>
+      <div class="package">৳1000 - 20 Mbps</div>
+      <div class="package">৳1500 - 30 Mbps</div>
+      <div class="package">৳2000 - 50 Mbps</div>
+    </div>
+  </section>
+
+  <section id="ftp">
+    <h2 class="section-title">FTP Server / Live TV / Torrent Server</h2>
+    <ul>
+      <li><a href="http://dhakamovie.com/" target="_blank">🎬 Movie Server</a></li>
+      <li><a href="http://172.27.27.3/" target="_blank">📺 Live TV</a></li>
+      <li><a href="http://172.27.27.5" target="_blank">🎮 SA Cyber Games</a></li>
+      <li><a href="http://10.16.100.244" target="_blank">🌐 ICC Server: Korean</a></li>
+      <li><a href="https://bdixtv.serverbd247.com/" target="_blank">📺 TV Channel Server</a></li>
+      <li><a href="http://172.27.27.1/" target="_blank">🎞️ Biggest Movie Server</a></li>
+      <li><a href="https://ftpbd.net/" target="_blank">🗂️ FTPBD</a></li>
+      <li>🖥️ DBA Server - SA Cyber Net | Number: ০১৯৯৯৯৪৪৫৬১</li>
+    </ul>
+  </section>
+
+  <section id="bdnews">
+    <h2 class="section-title">BD News & Media</h2>
+    <ul>
+      <li><a href="https://www.banglamagazine.news/" target="_blank">📰 Bangla Magazine</a></li>
+      <li><a href="https://www.bioscopelive.com/" target="_blank">🎥 Bioscope Live</a></li>
+      <li><a href="https://www.banglahealthcare.com/" target="_blank">🏥 Bangla Health Care</a></li>
+      <li><a href="https://www.jagobd.com/" target="_blank">📺 JagoBD Live</a></li>
+    </ul>
+  </section>
+
+  <section id="billing">
+    <h2 class="section-title">Billing & Payment</h2>
+    <p>আপনার ইন্টারনেট বিল নির্দিষ্ট সময়ে নিম্নোক্ত বিকাশ নম্বরে পরিশোধ করুন:</p>
+    <ul>
+      <li><strong>bKash Merchant Number:</strong> ০১৯৯৯৯৪৪৫৬৬</li>
+    </ul>
+    <p>দয়া করে সময়মতো পরিশোধ করুন, ধন্যবাদ SA Cyber Net ব্যবহার করার জন্য।</p>
+  </section>
+
+  <section id="btrc">
+    <h2 class="section-title">BTRC Approved</h2>
+    <p>SA Cyber Net একটি BTRC অনুমোদিত লাইসেন্সপ্রাপ্ত ইন্টারনেট সেবা প্রদানকারী প্রতিষ্ঠান।</p>
+  </section>
+
+  <section id="userportal">
+    <h2 class="section-title">User Portal</h2>
+    <p>ইউজাররা তাদের ইন্টারনেট অ্যাকাউন্ট ব্যালেন্স, বিল, সার্ভিস অবস্থা ইত্যাদি দেখতে নিচের পোর্টালে লগইন করতে পারেন:</p>
+    <p>🔐 <a href="https://sacybernet.isperp.net/ispcare" target="_blank">SA Cyber Net User Portal</a></p>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Information</h2>
+    <p><strong>ঠিকানা:</strong> ৫৪/৪ সেনপাড়া পর্বতা, মিরপুর ১০, ঢাকা ১২১৬</p>
+    <p><strong>ফোন:</strong> ০১৯৯৯৯৪৪৫৬১-৬</p>
+    <p><strong>ইমেইল:</strong> <a href="mailto:alomgirnetbd@gmail.com">alomgirnetbd@gmail.com</a></p>
+    <p><strong>ওয়েবসাইট:</strong> <a href="https://github.com/sacybernet/mirpur" target="_blank">github.com/sacybernet/mirpur</a></p>
+  </section>
+
+  <section id="owner">
+    <h2 class="section-title">প্রতিষ্ঠান মালিক</h2>
+    <img src="owner.jpg" alt="Owner Photo" />
+    <p><strong>আলমগীর মৃধা</strong><br>Owner, SA Cyber Net</p>
+  </section>
+
+</main>
+
+<footer>
+  &copy; ২০২৫ SA Cyber Net. Developed by Artefact Associates.
+</footer>
+
+</body>
+</html>
