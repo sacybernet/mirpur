@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SA Cyber Net - Full Site</title>
+  <title>SA Cyber Net</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       background: #f5f7fa;
       color: #333;
       margin: 0;
+      padding: 0;
     }
     a {
       text-decoration: none;
@@ -26,16 +27,25 @@
     header {
       background: #003366;
       color: white;
-      padding: 15px 0;
+      padding: 10px 0;
       position: sticky;
       top: 0;
       z-index: 100;
     }
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    header img {
+      height: 45px;
+    }
     nav {
       display: flex;
       justify-content: center;
-      gap: 15px;
       flex-wrap: wrap;
+      gap: 12px;
       font-weight: 600;
     }
     nav a {
@@ -46,6 +56,14 @@
     }
     nav a:hover {
       background: #00509e;
+    }
+    .notice {
+      background: #fff3cd;
+      color: #856404;
+      text-align: center;
+      padding: 12px;
+      font-weight: bold;
+      border-bottom: 2px solid #ffeeba;
     }
     section {
       background: white;
@@ -79,6 +97,14 @@
     ul li {
       margin-bottom: 8px;
     }
+    #owner {
+      text-align: center;
+    }
+    #owner img {
+      height: 140px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
     footer {
       background: #003366;
       color: white;
@@ -93,24 +119,41 @@
 </head>
 <body>
 
+<div class="notice">
+  প্রিয় গ্রাহক, আমাদের সকল সম্মানিত গ্রাহকদের অবগতির জন্য জানানো যাচ্ছে যে, আপনারা আপনাদের ইন্টারনেট বিল সঠিক সময়ে নিজ দায়িত্বে পরিশোধ করুন। অন্যথায় আপনার ইন্টারনেট সংযোগ সার্ভার থেকে স্বয়ংক্রিয়ভাবে বিচ্ছিন্ন হবে। দয়া করে বিল বিকাশ অথবা অফিসে এসে পরিশোধ করুন। মার্চেন্ট নম্বর ০১৯৯৯৯৪৪৫৬৬ (বিকাশ), ধন্যবাদ SA Cyber Net।
+</div>
+
 <header>
-  <nav class="container" aria-label="Primary navigation">
-    <a href="#home">Home</a>
-    <a href="#packages">Packages</a>
-    <a href="#ftp">FTP Server</a>
-    <a href="#bdnews">BD News</a>
-    <a href="#billing">Billing</a>
-    <a href="#btrc">BTRC Approved</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="container">
+    <img src="logo.png" alt="SA Cyber Net Logo" />
+    <nav aria-label="Primary navigation">
+      <a href="#home">Home</a>
+      <a href="#packages">Packages</a>
+      <a href="#ftp">FTP Server</a>
+      <a href="#bdnews">BD News</a>
+      <a href="#billing">Billing</a>
+      <a href="#btrc">BTRC Approved</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
 <main class="container">
 
   <section id="home">
-    <h2 class="section-title">SA Cyber Net</h2>
-    <p><strong>SA Cyber Net</strong> — গ্রামীণ অঞ্চলের জন্য একটি নির্ভরযোগ্য ব্রডব্যান্ড ইন্টারনেট সেবা।</p>
-    <p>আমরা লাইসেন্সপ্রাপ্ত UHF ব্যান্ডের মাধ্যমে দ্রুত ও নিরবিচারে ইন্টারনেট সার্ভিস প্রদান করি।</p>
+    <h2 class="section-title">Who are we?</h2>
+    <p><strong>SA Cyber Net</strong> is a Broadband Internet Service Provider for rural customers. SA Cyber Net separates itself from the rest of the internet providers by applying and receiving fully licensed spectrum from Industry Bangladesh.</p>
+    <p>This means our technology is fully endorsed by the federal government, allowing SA Cyber Net to offer fast and reliable internet to our users.</p>
+    <h3>Broadband Internet Service</h3>
+    <p>Most rural users think satellite is the only way to get internet. But SA Cyber Net uses earth-bound UHF band signals from company radio masts directly to your home with state-of-the-art aluminum yagi antennas.</p>
+    <h3>Reliability</h3>
+    <p>Licensed spectrum means no interference — unlike unlicensed radio bands. This ensures high service quality and stable connections. Our technical and customer support teams are available 24/7 to help with any concerns.</p>
+    <h3>What's new at SA Cyber Net</h3>
+    <ul>
+      <li>High-speed internet for all zones</li>
+      <li>Smart user portal integration</li>
+      <li>UHF-powered connectivity using BDIX infrastructure</li>
+    </ul>
   </section>
 
   <section id="packages">
@@ -173,8 +216,14 @@
     <h2 class="section-title">Contact Information</h2>
     <p><strong>ঠিকানা:</strong> ৫৪/৪ সেনপাড়া পর্বতা, মিরপুর ১০, ঢাকা ১২১৬</p>
     <p><strong>ফোন:</strong> ০১৯৯৯৯৪৪৫৬১-৬</p>
-    <p><strong>ইমেইল:</strong> <a href="mailto:info@sacybernet.com">info@sacybernet.com</a></p>
-    <p><strong>ওয়েবসাইট:</strong> <a href="http://sacybernet.com" target="_blank">sacybernet.com</a></p>
+    <p><strong>ইমেইল:</strong> <a href="mailto:alomgirnetbd@gmail.com">alomgirnetbd@gmail.com</a></p>
+    <p><strong>ওয়েবসাইট:</strong> <a href="https://github.com/sacybernet/mirpur" target="_blank">github.com/sacybernet/mirpur</a></p>
+  </section>
+
+  <section id="owner">
+    <h2 class="section-title">প্রতিষ্ঠান মালিক</h2>
+    <img src="owner.jpg" alt="Owner Photo" />
+    <p><strong>আলমগীর মৃধা</strong><br>Owner, SA Cyber Net</p>
   </section>
 
 </main>
