@@ -8,142 +8,118 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #f5f7fa;
-      color: #333;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
       margin: 0;
       padding: 0;
     }
-    a {
-      text-decoration: none;
-      color: #0066cc;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
-    header {
-      background: #003366;
-      color: white;
-      padding: 10px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+    a { color: #ffd700; text-decoration: none; }
+    header { background: rgba(0, 51, 102, 0.9); padding: 10px 0; }
     header .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    header img {
-      height: 45px;
+      display: flex; justify-content: space-between;
+      padding: 0 20px; align-items: center;
     }
     nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      font-weight: 600;
+      display: flex; gap: 12px; flex-wrap: wrap;
     }
     nav a {
-      color: white;
-      padding: 8px 12px;
-      border-radius: 4px;
-      transition: background 0.3s ease;
-    }
-    nav a:hover {
-      background: #00509e;
+      color: white; padding: 8px 12px; font-weight: 600;
+      cursor: pointer;
     }
     .notice {
-      background: #fff3cd;
-      color: #856404;
-      text-align: center;
-      padding: 12px;
-      font-weight: bold;
-      border-bottom: 2px solid #ffeeba;
+      background: rgba(255,243,205,0.95);
+      color: #000; text-align: center;
+      padding: 12px; font-weight: bold;
     }
     section {
-      background: white;
+      background: rgba(0,0,0,0.7);
+      margin: 20px auto;
       padding: 20px;
-      margin: 20px 15px;
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-radius: 8px;
+      max-width: 1000px;
     }
     h2.section-title {
-      color: #003366;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #003366;
+      border-bottom: 2px solid #ffd700;
       padding-bottom: 5px;
-    }
-    .package-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 10px;
-    }
-    .package {
-      background: #f1f5f9;
-      padding: 15px;
-      text-align: center;
-      font-weight: bold;
-      border-radius: 8px;
-      border-left: 6px solid #0284c7;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    ul li {
-      margin-bottom: 8px;
-    }
-    #owner {
-      text-align: center;
-    }
-    #owner img {
-      height: 140px;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-    footer {
-      background: #003366;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-    }
-    footer a {
+      margin-bottom: 20px;
       color: #ffd700;
     }
+    .package-grid-arnivision {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+    }
+    .pkg-card {
+      background: #ffffff; color: #000;
+      border: 2px solid #003366;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+    .pkg-card h3 { margin: 0; color: #003366; }
+    .pkg-card p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+    .pkg-card button {
+      background: #0284c7;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .pkg-card button:hover {
+      background: #00509e;
+    }
+    ul.server-list {
+      list-style: square;
+      padding-left: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.8);
+      font-size: 14px;
+    }
   </style>
+  
+<script>
+  function toggleUserPortal() {
+    var section = document.getElementById("userportal");
+    if (section.style.display === "none") {
+      section.style.display = "block";
+      window.scrollTo({ top: section.offsetTop, behavior: 'smooth' });
+    } else {
+      section.style.display = "none";
+    }
+  }
+</script>
+
 </head>
 <body>
 
-<div class="notice">
-  প্রিয় গ্রাহক, আমাদের সকল সম্মানিত গ্রাহকদের অবগতির জন্য জানানো যাচ্ছে যে, আপনারা আপনাদের ইন্টারনেট বিল সঠিক সময়ে নিজ দায়িত্বে পরিশোধ করুন। অন্যথায় আপনার ইন্টারনেট সংযোগ সার্ভার থেকে স্বয়ংক্রিয়ভাবে বিচ্ছিন্ন হবে। দয়া করে বিল বিকাশ অথবা অফিসে এসে পরিশোধ করুন। মার্চেন্ট নম্বর ০১৯৯৯৯৪৪৫৬৬ (বিকাশ), ধন্যবাদ SA Cyber Net।
-</div>
+<div class="notice">প্রিয় গ্রাহক, আমাদের সকল সম্মানিত গ্রাহকদের অবগতির জন্য জানানো যাচ্ছে যে, আপনারা আপনাদের ইন্টারনেট বিল সঠিক সময়ে নিজ দায়িত্বে পরিশোধ করুন। অন্যথায় আপনার ইন্টারনেট সংযোগ সার্ভার থেকে স্বয়ংক্রিয়ভাবে বিচ্ছিন্ন হবে। দয়া করে বিল বিকাশ অথবা অফিসে এসে পরিশোধ করুন। মার্চেন্ট নম্বর ০১৯৯৯৯৪৪৫৬৬ (বিকাশ), ধন্যবাদ SA Cyber Net।</div>
 
 <header>
   <div class="container">
-    <img src="logo.png" alt="SA Cyber Net Logo" />
-    <nav aria-label="Primary navigation">
-      <a href="#home">Home</a>
+    <img src="logo.png" alt="SA Cyber Net" height="45" />
+    <nav>
+      <a href="#">Home</a>
       <a href="#packages">Packages</a>
-      <a href="#ftp">FTP Server</a>
-      <a href="#bdnews">BD News</a>
+      <a href="#servers">Servers</a>
       <a href="#billing">Billing</a>
-      <a href="#btrc">BTRC Approved</a>
       <a href="#contact">Contact</a>
+      <a onclick="toggleUserPortal()">☰</a>
     </nav>
   </div>
 </header>
 
-<main class="container">
-
-  <section id="home">
+<main>
+  <section id="about">
     <h2 class="section-title">Who are we?</h2>
-    <p><strong>SA Cyber Net</strong> is a Broadband Internet Service Provider for rural customers. SA Cyber Net separates itself from the rest of the internet providers by applying and receiving fully licensed spectrum from Industry Bangladesh.</p>
+    <p>SA Cyber Net is a Broadband Internet Service Provider for rural customers. SA Cyber Net separates itself from the rest of the internet providers by applying and receiving fully licensed spectrum from Industry Bangladesh.</p>
     <p>This means our technology is fully endorsed by the federal government, allowing SA Cyber Net to offer fast and reliable internet to our users.</p>
     <h3>Broadband Internet Service</h3>
     <p>Most rural users think satellite is the only way to get internet. But SA Cyber Net uses earth-bound UHF band signals from company radio masts directly to your home with state-of-the-art aluminum yagi antennas.</p>
@@ -159,74 +135,93 @@
 
   <section id="packages">
     <h2 class="section-title">Internet Packages</h2>
-    <div class="package-grid">
-      <div class="package">৳500 - 10 Mbps</div>
-      <div class="package">৳600 - 12 Mbps</div>
-      <div class="package">৳800 - 15 Mbps</div>
-      <div class="package">৳1000 - 20 Mbps</div>
-      <div class="package">৳1500 - 30 Mbps</div>
-      <div class="package">৳2000 - 50 Mbps</div>
+    <div class="package-grid-arnivision">
+      <div class="pkg-card"><h3>৳500</h3><p>10 Mbps</p><a href="order.html"><button>Order Now</button></a></div>
+      <div class="pkg-card"><h3>৳600</h3><p>15 Mbps</p><a href="order.html"><button>Order Now</button></a></div>
+      <div class="pkg-card"><h3>৳800</h3><p>20 Mbps</p><a href="order.html"><button>Order Now</button></a></div>
+      <div class="pkg-card"><h3>৳1000</h3><p>30 Mbps</p><a href="order.html"><button>Order Now</button></a></div>
+      <div class="pkg-card"><h3>৳1500</h3><p>40 Mbps</p><a href="order.html"><button>Order Now</button></a></div>
+      <div class="pkg-card"><h3>৳1800</h3><p>50 Mbps</p><a href="order.html"><button>Order Now</button></a></div>
+      <div class="pkg-card"><h3>৳2000</h3><p>60 Mbps</p><a href="order.html"><button>Order Now</button></a></div>
+      <div class="pkg-card"><h3>৳2400</h3><p>70 Mbps</p><a href="order.html"><button>Order Now</button></a></div>
+      <div class="pkg-card"><h3>৳2700</h3><p>80 Mbps</p><a href="order.html"><button>Order Now</button></a></div>
+      <div class="pkg-card"><h3>৳3000</h3><p>90 Mbps</p><a href="order.html"><button>Order Now</button></a></div>
+      <div class="pkg-card"><h3>৳3300</h3><p>100 Mbps</p><a href="order.html"><button>Order Now</button></a></div>
+      <div class="pkg-card"><h3>৳4000</h3><p>150 Mbps</p><a href="order.html"><button>Order Now</button></a></div>
     </div>
   </section>
+<!-- New Wi-Fi Connection Section -->
+<section id="new-wifi" style="background: rgba(0,0,0,0.7); padding: 40px 20px; color: #fff; margin-top: 20px;">
+  <h2 class="section-title">Get New Wi-Fi Connection For Home</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 30px;">
+    
+    <div style="flex: 2; min-width: 300px;">
+      <p>Enjoy High-Speed Home Internet With Symmetrical Upload And Download Speed Across Multiple Devices.</p>
+      <ul>
+        <li>✅ Expert Technical Team</li>
+        <li>✅ Best Network</li>
+        <li>✅ 50+ Coverage Areas</li>
+        <li>✅ 24/7 Quick Support</li>
+        <li>✅ Reasonable Price Packages</li>
+        <li>✅ Trusted & Recommended</li>
+      </ul>
+      <a href="contact.html" style="background: #ffd700; color: black; padding: 10px 20px; border-radius: 5px;">GET STARTED</a>
+    </div>
+    <div style="flex: 1; min-width: 300px;">
+      <img src="about-image-2.jpg" alt="Customer support and service at SA Cyber Net" style="width: 100%; border-radius: 10px;" />
+    </div>
+  </div>
+</section>
 
-  <section id="ftp">
-    <h2 class="section-title">FTP Server / Live TV / Torrent Server</h2>
-    <ul>
-      <li><a href="http://dhakamovie.com/" target="_blank">🎬 Movie Server</a></li>
-      <li><a href="http://172.27.27.3/" target="_blank">📺 Live TV</a></li>
-      <li><a href="http://172.27.27.5" target="_blank">🎮 SA Cyber Games</a></li>
-      <li><a href="http://10.16.100.244" target="_blank">🌐 ICC Server: Korean</a></li>
-      <li><a href="https://bdixtv.serverbd247.com/" target="_blank">📺 TV Channel Server</a></li>
-      <li><a href="http://172.27.27.1/" target="_blank">🎞️ Biggest Movie Server</a></li>
-      <li><a href="https://ftpbd.net/" target="_blank">🗂️ FTPBD</a></li>
-      <li>🖥️ DBA Server - SA Cyber Net | Number: ০১৯৯৯৯৪৪৫৬১</li>
+
+  <section id="servers">
+    <h2 class="section-title">All Servers</h2>
+    <ul class="server-list">
+      <li><a href="https://www.jagobd.com/">Jago BD</a></li>
+      <li><a href="https://ftpbd.net/">FTPBD</a></li>
+      <li><a href="https://www.bioscopelive.com/">BIOSCOPE</a></li>
+      <li><a href="https://www.banglahealthcare.com/">Bangla Health Care</a></li>
+      <li><a href="https://www.bilibili.tv/en/category?season_type=1,4">BILIBILI</a></li>
+      <li><strong>🖥️ DBA Server - SA Cyber Net</strong> | Number: ০১৯৯৯৯৪৪৫৬১</li>
+      <li><a href="http://dhakamovie.com/">Movie Server</a></li>
+      <li><a href="http://172.27.27.3/">Live TV</a></li>
+      <li><a href="http://172.27.27.5/">Gaming Server: SA Cyber Games</a></li>
+      <li><a href="http://10.16.100.244/">ICC Server: Korean</a></li>
+      <li><a href="https://bdixtv.serverbd247.com/">TV Channel Server</a></li>
+      <li><a href="http://172.27.27.1/">Biggest Online Movie Server</a></li>
     </ul>
   </section>
 
-  <section id="bdnews">
-    <h2 class="section-title">BD News & Media</h2>
-    <ul>
-      <li><a href="https://www.banglamagazine.news/" target="_blank">📰 Bangla Magazine</a></li>
-      <li><a href="https://www.bioscopelive.com/" target="_blank">🎥 Bioscope Live</a></li>
-      <li><a href="https://www.banglahealthcare.com/" target="_blank">🏥 Bangla Health Care</a></li>
-      <li><a href="https://www.jagobd.com/" target="_blank">📺 JagoBD Live</a></li>
-    </ul>
-  </section>
-
-  <section id="billing">
+  
+  <section id="billinginfo">
     <h2 class="section-title">Billing & Payment</h2>
     <p>আপনার ইন্টারনেট বিল নির্দিষ্ট সময়ে নিম্নোক্ত বিকাশ নম্বরে পরিশোধ করুন:</p>
-    <ul>
-      <li><strong>bKash Merchant Number:</strong> ০১৯৯৯৯৪৪৫৬৬</li>
-    </ul>
+    <p><strong>bKash Merchant Number: ০১৯৯৯৯৪৪৫৬৬</strong></p>
     <p>দয়া করে সময়মতো পরিশোধ করুন, ধন্যবাদ SA Cyber Net ব্যবহার করার জন্য।</p>
+  </section>
+<section id="billing">
+    <h2 class="section-title">Billing</h2>
+    <p>বিকাশ মার্চেন্ট নম্বর: <strong>০১৯৯৯৯৪৪৫৬৬</strong></p>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p>ঠিকানা: মিরপুর-১০, ঢাকা</p>
+    <p>ফোন: ০১৯৯৯৯৪৪৫৬৬</p>
+    <p>ইমেইল: <a href="mailto:alomgirnetbd@gmail.com">alomgirnetbd@gmail.com</a></p>
+    <p>ওয়েবসাইট: <a href="https://sacybernet.github.io/mirpur/">sacybernet.github.io/mirpur</a></p>
+  </section>
+
+  <section id="userportal" style="display:none;">
+    <h2 class="section-title">User Portal</h2>
+    <p>ইউজাররা তাদের ইন্টারনেট অ্যাকাউন্ট ব্যালেন্স, বিল, সার্ভিস অবস্থা ইত্যাদি দেখতে নিচের পোর্টালে লগইন করতে পারেন:</p>
+    <p>🔐 <a href="https://sacybernet.isperp.net/ispcare" target="_blank">https://sacybernet.isperp.net/ispcare</a></p>
   </section>
 
   <section id="btrc">
     <h2 class="section-title">BTRC Approved</h2>
     <p>SA Cyber Net একটি BTRC অনুমোদিত লাইসেন্সপ্রাপ্ত ইন্টারনেট সেবা প্রদানকারী প্রতিষ্ঠান।</p>
   </section>
-
-  <section id="userportal">
-    <h2 class="section-title">User Portal</h2>
-    <p>ইউজাররা তাদের ইন্টারনেট অ্যাকাউন্ট ব্যালেন্স, বিল, সার্ভিস অবস্থা ইত্যাদি দেখতে নিচের পোর্টালে লগইন করতে পারেন:</p>
-    <p>🔐 <a href="https://sacybernet.isperp.net/ispcare" target="_blank">SA Cyber Net User Portal</a></p>
-  </section>
-
-  <section id="contact">
-    <h2 class="section-title">Contact Information</h2>
-    <p><strong>ঠিকানা:</strong> ৫৪/৪ সেনপাড়া পর্বতা, মিরপুর ১০, ঢাকা ১২১৬</p>
-    <p><strong>ফোন:</strong> ০১৯৯৯৯৪৪৫৬১-৬</p>
-    <p><strong>ইমেইল:</strong> <a href="mailto:alomgirnetbd@gmail.com">alomgirnetbd@gmail.com</a></p>
-    <p><strong>ওয়েবসাইট:</strong> <a href="https://sacybernet.github.io/mirpur/" target="_blank">https://sacybernet.github.io/mirpur/</a></p>
-  </section>
-
-  <section id="owner">
-    <h2 class="section-title">প্রতিষ্ঠান মালিক</h2>
-    <img src="owner.jpg" alt="Owner Photo" />
-    <p><strong>আলমগীর মৃধা</strong><br>Owner, SA Cyber Net</p>
-  </section>
-
 </main>
 
 <footer>
